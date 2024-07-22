@@ -35,7 +35,26 @@
                 alert("이름은 4글자 이상입니다");
                 myForm.name.focus(); //인풋태그의 포커싱
                 return; //함수종료
+            } else {
+                //console.log(myForm.info);
+                var arr = myForm.info; //폼이름.네임으로 접근 가능
+                var cnt = 0;
+
+                for(var i =0; i< arr.length; i++) {
+                    if(arr[i].checked){
+                        cnt++;
+                    }
+                }
+
+                if(cnt == 0) {
+                    alert("적어도 하나의 분야를 선택하세요");
+                    return;
+                }
             }
+
+            //폼 서브밋 js
+            myForm.submit();
+            
 
 
             
