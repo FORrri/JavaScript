@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+    9V7hQJAqpMiSgPghp+WR3DUt+KqZRwQSgq4CPRfgffEgiSZjDS9HJ8mmOn91OxShvdj0lM+GPUGu130pRKMH4Q==
+    9V7hQJAqpMiSgPghp%2BWR3DUt%2BKqZRwQSgq4CPRfgffEgiSZjDS9HJ8mmOn91OxShvdj0lM%2BGPUGu130pRKMH4Q%3D%3D 
+    서울시 노선정보조회 서비스 getRouteInfoItem -> CORS 에러
+    -->
+
+
+    <script>
+        //공공데이터 포털 사용하다보면 CORS 나오는 경우 - 서버에서 거절한 것이기 때문에, 절대 데이터값을 얻을수 없다
+
+        fetch("http://openapi.seoul.go.kr:8088/68624b5066796f70383449416a4357/json/bikeList/1/5/") //서울특별시 공공자전거 실시간 대여정보
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(data) {
+            console.log(data);
+            //.............
+        })
+
+    </script>
+
+</body>
+</html>
